@@ -48,10 +48,6 @@ class User {
     }
 
     deleteUser(res, user) {
-        // if(!this.users.find(el => el.name === user.name)) {
-        //     res.status(500).json('cannot find');
-        //     return;
-        // }
         this.users = this.users.filter(el => el.name !== user.name)
         res.status(200).json('delete success')
     }
